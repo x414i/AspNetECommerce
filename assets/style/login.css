@@ -1,0 +1,90 @@
+﻿*{
+        font-family: 'Cairo', sans-serif;
+
+}
+body {
+    background-color: #f0f4f8;
+    font-family: Cairo, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.checkbox {
+    margin: 10px 0;
+}
+
+#error-message {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.welcome-panel {
+    text-align: center;
+}
+
+.link-button {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.link-button:hover {
+    text-decoration: underline;
+}

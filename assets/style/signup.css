@@ -1,0 +1,81 @@
+﻿body {
+    font-family: Cairo, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    direction:rtl;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    display: inline;
+}
+
+.gender-label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.input-field {
+        display: block;
+
+    width: 95%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-field:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.error {
+    color: #dc3545;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+#cbTerms{
+    display:inline;
+}

@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" %>
+
+<!DOCTYPE html>
+
+<script runat="server">
+
+    protected void lbtnSignOut_Click(object sender, EventArgs e)
+    {
+        HttpCookie cookieDelete = new HttpCookie("login");
+        cookieDelete.Expires = DateTime.Now.AddDays(-1);
+        Response.Cookies.Add(cookieDelete);
+        Response.Redirect("..\\Index.html");
+    }
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if ((Request.Cookies["login"] == null) || (Request.Cookies["Login"]["user"].ToString().ToLower() != "admin"))
+            Response.Redirect("..\\Index.html");
+    }
+
+    protected void lbtnHomeAdmine_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Admin.aspx");
+    }
+
+    protected void lbtnCategory_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Category.aspx");
+    }
+
+    protected void lbtnProduct_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Product.aspx");
+    }
+
+    protected void lbtnMember_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Member.aspx");
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: xx-large;
+        }
+        .auto-style2 {
+            width: 944px;
+        }
+        .auto-style3 {
+            text-align: center;
+        }
+        .auto-style4 {
+            height: 32px;
+            text-align: center;
+        }
+        .auto-style5 {
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table align="center" class="auto-style2">
+            <tr>
+                <td><strong>
+                    <asp:Label ID="Label1" runat="server" CssClass="auto-style1" Text="Administrative Services"></asp:Label>
+                    </strong></td>
+                <td>
+                    <object height="140px" width="500px">
+                        <!--D:\Program Files\Microsoft SQL Server\MSSQL16.MSBMIS\MSSQL\DATA\COMPANY.mdf-->
+                        <img src="../assets/logo.jpg" width="400px" height="250px"/>
+                    </object>
+                </td>
+                <td>
+                    <asp:Image ID="Image1" runat="server" Height="120px" Width="206px" ImageUrl="~/assets/logo.png" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3" colspan="3"><strong>
+                    <asp:LinkButton ID="lbtnCategory" runat="server" OnClick="lbtnCategory_Click">Category</asp:LinkButton>
+&nbsp;:: </strong>
+                    <asp:LinkButton ID="lbtnProduct" runat="server" Font-Bold="True" OnClick="lbtnProduct_Click">Product</asp:LinkButton>
+&nbsp;::
+                    <asp:LinkButton ID="lbtnMember" runat="server" Font-Bold="True" OnClick="lbtnMember_Click">Member</asp:LinkButton>
+                    :: <strong>
+                    <asp:LinkButton ID="lbtnHomeAdmine" runat="server" OnClick="lbtnHomeAdmine_Click">Home Administrator</asp:LinkButton>
+&nbsp;::
+                    <asp:LinkButton ID="lbtnSignOut" runat="server" OnClick="lbtnSignOut_Click">Sign Out</asp:LinkButton>
+                    <hr />
+                    </strong></td>
+            </tr>
+            <tr>
+                <td class="auto-style4" colspan="3">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <asp:Panel ID="Panel1" runat="server">
+                        </asp:Panel>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>
+                    <hr />
+                    <div class="auto-style3">
+                        </strong>
+                        <br />
+                        <strong><span class="auto-style5"><em>ALL rights reserved to the company for question send to span class="auto-style5"><em>ALL rights reserved to the company for question send to <a href="mailto:yourEmail@yoursite.com"> web master </a></em></span></strong></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

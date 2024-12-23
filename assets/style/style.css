@@ -1,0 +1,42 @@
+﻿body {
+    font-family: Cairo, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: red;
+}
+
+.menu {
+    background: #cabdff;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.nav {
+    background: #333;
+    position: fixed;
+    font: bold 80% Arial, sans-serif;
+    top: 50px;
+    left: -135px;
+    width: 150px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: left 0.3s ease;
+}
+
+.nav .menu:hover {
+    background: #b0a7ff;
+    cursor: pointer;
+}

@@ -1,0 +1,67 @@
+﻿/* styles.css */
+
+/* تنسيقات عامة */
+body {
+    font-family: Cairo, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0; /* إزالة الحشوة العامة */
+    
+}
+
+
+h1, h2 {
+    color: #4A3C8C;
+}
+
+button {
+    background-color: #4A3C8C;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+
+button:hover {
+    background-color: #3E3277;
+}
+
+/* تنسيقات الجداول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #E7E7FF;
+    text-align: left;
+}
+
+th {
+    background-color: #4A3C8C;
+    color: white;
+}
+
+.label-message {
+    color: red;
+    font-weight: bold;
+}
+
+.multi-view {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    
+    margin: 0 auto; /* توسيط العنصر */
+}

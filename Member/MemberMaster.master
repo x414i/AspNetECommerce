@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" %>
+
+<!DOCTYPE html>
+
+<script runat="server">
+    protected void lbtnSignOut_Click(object sender, EventArgs e)
+    {
+        HttpCookie cookieDelete = new HttpCookie("login");
+        cookieDelete.Expires = DateTime.Now.AddDays(-1);
+        Response.Cookies.Add(cookieDelete);
+        Response.Redirect("..\\Index.html");
+    }
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Request.Cookies["login"] == null)
+            Response.Redirect("..\\Index.html");
+    }
+    protected void lbtnHomeMember_Click(object sender, EventArgs e)
+    {
+         //JAVA-Script
+
+        Response.Redirect("Member.aspx");
+    }
+    protected void lbtnProCategory_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Categories.aspx");
+    }
+    protected void lbtnShoppingCart_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Cart2.aspx");
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="rtl">
+<head runat="server">
+    <title>خدمات الأعضاء</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="style/master.css" />
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .header img {
+            max-width: 400px;
+            }
+        .nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav a {
+            margin: 0 15px;
+            font-size: 18px;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="header">
+                <asp:Label ID="Label1" runat="server" Text="خدمات الأعضاء" CssClass="header-title" Font-Bold="True" Font-Names="cairo" Font-Size="60pt"></asp:Label>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/assets/logo.png" Width="601px" />
+            </div>
+            <div class="nav">
+                <asp:LinkButton ID="lbtnHomeMember" runat="server" OnClick="lbtnHomeMember_Click" Font-Bold="True" Font-Names="Cairo">الصفحة الرئيسية</asp:LinkButton>
+                <asp:LinkButton ID="lbtnProCategory" runat="server" OnClick="lbtnProCategory_Click" Font-Bold="True" Font-Names="Cairo">فئات المنتجات</asp:LinkButton>
+                <asp:LinkButton ID="lbtnShoppingCart" runat="server" OnClick="lbtnShoppingCart_Click" Font-Bold="True" Font-Names="Cairo">عربة التسوق</asp:LinkButton>
+                <asp:LinkButton ID="lbtnSignOut" runat="server" OnClientClick="return confirm('هل أنت متأكد من تسجيل الخروج؟');" OnClick="lbtnSignOut_Click" Font-Bold="True" Font-Names="Cairo" ForeColor="Red">تسجيل الخروج</asp:LinkButton>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <asp:Panel ID="Panel1" runat="server">
+                </asp:Panel>
+            </asp:ContentPlaceHolder>
+            <div class="footer">
+                <strong>جميع الحقوق محفوظة للشركة، للاستفسارات، يرجى الاتصال بـ <a href="mailto:yourEmail@yoursite.com">مدير الموقع</a></strong>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

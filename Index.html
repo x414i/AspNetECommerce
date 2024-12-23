@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر بلعيد</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+       
+    </style>
+    <link rel="stylesheet" href="assets/style/home.css" />
+</head>
+<body>
+    <header class="bg-blue-600 text-white text-center py-4">
+        <h1 class="text-3xl font-bold">مرحبًا بك في متجر بلعيد</h1>
+    </header>
+
+    <nav class="bg-gray-800 text-white p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-semibold">متجر بلعيد</a>
+            <div class="relative">
+                <button id="dropdownButton" class="text-white text-lg px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="dropdownMenu" class="absolute mt-2 bg-white shadow-lg rounded-md w-48 dropdown-menu">
+                    <li><a href="#" class="block px-4 py-2 text-gray-800"><i class="fas fa-home"></i> الصفحة الرئيسية</a></li>
+                    <li><a href="signup.aspx" class="block px-4 py-2 text-gray-800"><i class="fas fa-user-plus"></i> التسجيل</a></li>
+                    <li><a href="unsubscribe.aspx" class="block px-4 py-2 text-gray-800"><i class="fas fa-times-circle"></i> إلغاء الاشتراك</a></li>
+                    <li><a href="Update.aspx" class="block px-4 py-2 text-gray-800"><i class="fas fa-edit"></i> تعديل الحساب</a></li>
+                    <li><a href="PasswordRecovery.aspx" class="block px-4 py-2 text-gray-800"><i class="fas fa-key"></i> استعادة كلمة المرور</a></li>
+                    <li><a href="Login.aspx" class="block px-4 py-2 text-gray-800"><i class="fas fa-sign-in-alt"></i> تسجيل الدخول</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <h1 class="text-4xl font-bold">أهلاً وسهلاً بك في متجري</h1>
+        <p class="text-xl mt-4">اكتشف أفضل المنتجات بأسعار تنافسية مع خدمة توصيل سريعة</p>
+    </section>
+
+    <div class="max-w-7xl mx-auto mt-12 text-center">
+        <h2 class="text-3xl font-bold mb-8">ميزات متجري</h2>
+        <div class="flex justify-around gap-8">
+            <div class="feature">
+                <i class="fas fa-truck"></i>
+                <h3 class="text-xl font-semibold mt-4">توصيل سريع</h3>
+                <p class="mt-2 text-gray-600">نقدم خدمة توصيل سريعة وآمنة إلى جميع المناطق.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-tags"></i>
+                <h3 class="text-xl font-semibold mt-4">أفضل الأسعار</h3>
+                <p class="mt-2 text-gray-600">عروض وتخفيضات مميزة على جميع المنتجات.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-headset"></i>
+                <h3 class="text-xl font-semibold mt-4">دعم العملاء</h3>
+                <p class="mt-2 text-gray-600">فريق دعم متوفر على مدار الساعة لخدمتك.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-4 mt-12">
+        <p>جميع الحقوق محفوظة © 2024 متجر بلعيد</p>
+    </footer>
+
+    <script>
+        document.getElementById('dropdownButton').addEventListener('click', function() {
+            const menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
